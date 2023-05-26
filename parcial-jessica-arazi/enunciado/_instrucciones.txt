@@ -1,0 +1,30 @@
+Informática General 2023
+
+PRIMER PARCIAL - SEGUNDA PARTE
+La segunda parte del parcial consiste en armar una página HTML y su correspondiente hoja de estilos CSS según las indicaciones a continuación. 
+
+Junto con estas instrucciones se incluyen:
+- un archivo texto.txt que tiene todo el texto a utilizar en la página
+- una imagen para usar de fondo 
+- varias fotos para usar en la página
+- un dibujo modelo del layout que debe seguir el diseño de la página
+
+»» Intrucciones
+
+1. Crear los archivos HTML y CSS. Los nombres de carpetas y archivos deben estar escritos correctamente.
+
+2. El código HTML debe respetar la estructura de todo documento HTML (doctype, html, head, body).
+
+3. En el head se debe definir el title con información apropiada, el charset con la codificación correcta y el link a la hoja de estilos. 
+
+4. La página HTML debe incluir un encabezado, un menú de navegación, secciones/artículos de contenido y un pie de página. Se deben utilizar las etiquetas semánticas correspondientes en cada caso. Se debe utilizar TODO el texto del archivo entregado y todas las fotos entregadas.
+
+5. La diagramación de la página se debe realizar según el modelo entregado. Prestar especial atención a las columnas. El modelo sólo representa la diagramación esperada. El diseño específico (tamaños, colores, bordes, márgenes, espacios, ubicación de las imágenes, etc.) queda a criterio de cada estudiante.
+
+6. El diseño debe incluir la imagen de fondo como fondo de la página. También debe incluir colores de fondo y colores de texto, márgenes y padding para lograr una buena visualización y lectura del contenido.
+
+7. El menú de navegación debe incluir los links (pueden ser a la misma página) y el estado de rollover de cada link.
+
+8. El código HTML y el código CSS deben estar validados y sin errores.
+
+
