@@ -1,0 +1,133 @@
+body{
+    background-image: url(fondo.jpg);
+    font-family: 'Roboto', sans-serif;
+    color: #1f1b24;
+}
+#contenedor{
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #E57C23;
+    padding: 15px;
+    border-radius: 25px;
+}
+h1{
+    font-size: 3em;
+    color: white;
+}
+h2{
+    font-size: 1.8em;
+    font-weight: 500;
+    color: whitesmoke;
+
+}
+h3{
+    font-size: 1.5em;
+}
+p{
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+}
+#subtitulo-importante{
+    font-size: 2.2em;
+    font-weight:600;
+}
+header{
+    background-color: #EBBB1C;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 25px;
+
+}
+nav{
+    background-color: #FCAE26;
+    padding: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 25px;
+
+}
+li{
+    display: inline;
+    padding: 5px;
+    margin: 10px;
+    border: 5px outset;
+    border-radius: 25px;
+    background-color: whitesmoke;
+
+}
+ul {
+	margin:10px;
+	list-style-type:none;
+}
+a{
+    text-decoration: none;
+    font-size: 1em;
+    margin: 5px;
+    padding: 2px;
+    color: #1f1b24;
+}
+a:hover{
+    color: #ffffff;
+    background-color: #FCAE26;
+    border-radius: 25px;
+    margin: 5px;
+    padding: 2px;
+}
+a:visited{
+    display: none;
+}
+section{
+    background-color: transparent;
+    display: flex;
+    box-sizing: content-box;
+}
+.articulo-seccion-uno{
+    width: 50%;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 25px;
+    text-align: center;
+}
+.articulo-grande-seccion-dos{
+    width: 50%;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    margin: 10px;
+    padding: 15px;  
+    border-radius: 25px;
+    text-align: center;
+}
+.articulo-chico-seccion-dos{
+    width: 24%;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 25px;
+    text-align: center;
+}
+img{
+    width: 350px;
+    height: auto;
+    border-radius: 25px;
+}
+footer{
+    background-color: #EBBB1C;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 25px;
+}
+#parrafo-footer{
+    font-style: italic;
+    margin: 10px;
+    color: white;
+}
+#parrafo-importante{
+    color: #F97B22;
+    font-size: larger;
+}
