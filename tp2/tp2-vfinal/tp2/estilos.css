@@ -1,0 +1,108 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+    overflow-x: hidden;
+    
+    
+} 
+nav {
+    background-color: rgba(237, 132, 130, 0.7)
+    
+}
+.nav-link, .navbar-brand{
+    color: #f1e5e5;
+}
+
+
+.logos{
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+}
+h1{
+    color: #d5d5c8;
+    /*margin-left: 20px;
+    font-family: 'arial';
+    font-size: 3em;
+    letter-spacing: 1px;
+    line-height: 50px;
+    font-weight: bold; */
+} 
+label{
+    color: #d5d5c8;
+}
+
+
+.seccion-2{
+    background-color: rgb(36, 33, 33);
+    
+}
+p{
+    color: #d5d5c8;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+.seccion-3{
+    display: flex;
+    justify-content: center;
+}
+.seccion-1{
+    background-color: #d5d5c8;
+}
+section{
+    margin: 0px;
+    
+}
+
+iframe{
+    margin: 10px;
+}
+footer{
+    background-color: black;
+}
+.parrafo-footer{
+    font-size: smaller;
+}
+.seccion-3{
+    background-color: rgb(137, 18, 18);
+    padding: 100px;
+}
+button, .btn, .btn-light{
+    font-size: 1.5em;
+    margin: 15px;
+    background-color: #e8e8e0;
+    color: black;
+    border: transparent;
+}
+button:hover, .btn:hover, .btn-light:hover{
+    background-color: rgb(137, 18, 18);
+    color: #d5d5c8;
+}
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+    color: #d5d5c8;
+  }
+
+  .card-nosotros{
+    width: 18rem;
+    background-color: rgba(237, 132, 130, 0.7)
+  }
