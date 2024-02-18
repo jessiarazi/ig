@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Juego de preguntas</title>
+        <link href="estilos.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+        <script>
+            var pregunta; //esta variable tomará cada elemento del array preguntas
+            var opcion; //tomará el valor de cada opción dentro de cada array "opcionespreg1, 2, etc"
+            var boton;//toma elementos del array botones, que son los id de los botones, para asignarle la "opcion" anterior
+            //var respuesta; //creo que esta variable no sirve de nada, no está dentro del código
+            var puntaje = 10; //el juego inicia con un puntaje mayor a 0 así si no contesta bien la primera pregunta, no se reinicia automáticamente
+            var indice = 0;
+            var contenido;
+            var r = 0;
+
+            var preguntas = ['¿En qué año se inventó la escritura?','¿Cuál es el río más largo del mundo?','¿Cuál es el símbolo químico del oro?','¿Quién escribió "Don Quijote de la Mancha"?',' ¿Cuál es el planeta más grande del sistema solar?'];
+            var opcionespreg1 = ['2000 a.C.','3500 a.C.','500 a.C.','1000 d.C.'];
+            var opcionespreg2 = ['Río de La Plata','Río Amazonas','Río Nilo','Río Mississippi'];
+            var opcionespreg3 = ['Ag','Or','Go','Au'];
+            var opcionespreg4 = ['William Shakespeare','Miguel de Cervantes','Charles Dickens','José Hernández'];
+            var opcionespreg5 = ['Marte','Venus','Saturno','Júpiter'];
+            var imagenes = ['f1','f2','f3','f4','f5'];
+
+
+            var botones = ['rta1','rta2','rta3','rta4'];
+            var respuestas = ['3500 a.C.','Río Nilo','Au','Miguel de Cervantes','Júpiter']; //array con los índices de las respuestas correctas de cada pregunta.
+            
+            function iniciar(){     
+                document.getElementById('boton-inicio').style.display = 'none'; //reemplaza el contenido del botón comenzar por "siguiente pregunta"
+                sortearpregunta(); //genera una nueva pregunta a partir de la función sortearpregunta()
+                document.getElementById('titulo').innerHTML = pregunta; //reemplaza el contenido del título
+                document.getElementById('pregunta').style.display = 'none'; //toma la variable que devuelve la función sortearpregunta y la muestra en el párrafo con id="pregunta"
+                document.getElementById('rta1').style.display = 'block';
+                document.getElementById('rta2').style.display = 'block';
+                document.getElementById('rta3').style.display = 'block';
+                document.getElementById('rta4').style.display = 'block';
+                document.getElementById('points').style.display = 'block';
+
+                document.getElementById('puntaje').innerHTML = 'Tu puntaje es: '+ puntaje +' puntos'; //muestra el puntaje en el id "puntaje"
+            }
+
+            function sortearpregunta(){ //va agarrando preguntas del array en orden y las guarda en la variable preguntas
+                pregunta = preguntas[indice];
+                if(indice==0){
+                    //recorrer el array opcionespreg1 y meter cada índice en un botón diferente
+                    for (i=0; i<opcionespreg1.length; i++){
+                        opcion = opcionespreg1[i]; //toma las opciones de respuesta
+                        boton = botones[i]; //toma elementos del array botones, que son los id de los botones
+                        document.getElementById(boton).innerHTML = opcion;
+                        //el opcion debe meterse en el botón 1, que es el que tiene id rta 1, que es la posición 0 del array botones
+                    }
+                }
+                if(indice==1){
+                    for (i=0; i<opcionespreg2.length; i++){
+                        opcion = opcionespreg2[i]; //toma las opciones de respuesta
+                        boton = botones[i]; //toma elementos del array botones, que son los id de los botones
+                        document.getElementById(boton).innerHTML = opcion;
+                        //el opcion debe meterse en el botón 1, que es el que tiene id rta 1, que es la posición 0 del array botones
+                    }
+                }if(indice==2){
+                    //recorrer el array opcionespreg1 y meter cada índice en un botón diferente
+                    for (i=0; i<opcionespreg3.length; i++){
+                        opcion = opcionespreg3[i]; //toma las opciones de respuesta
+                        boton = botones[i]; //toma elementos del array botones, que son los id de los botones
+                        document.getElementById(boton).innerHTML = opcion;
+                        //el opcion debe meterse en el botón 1, que es el que tiene id rta 1, que es la posición 0 del array botones
+                    }
+                }
+                if(indice==3){
+                    //recorrer el array opcionespreg1 y meter cada índice en un botón diferente
+                    for (i=0; i<opcionespreg4.length; i++){
+                        opcion = opcionespreg4[i]; //toma las opciones de respuesta
+                        boton = botones[i]; //toma elementos del array botones, que son los id de los botones
+                        document.getElementById(boton).innerHTML = opcion;
+                        //el opcion debe meterse en el botón 1, que es el que tiene id rta 1, que es la posición 0 del array botones
+                    }
+                }
+                if(indice==4){
+                    //recorrer el array opcionespreg1 y meter cada índice en un botón diferente
+                    for (i=0; i<opcionespreg5.length; i++){
+                        opcion = opcionespreg5[i]; //toma las opciones de respuesta
+                        boton = botones[i]; //toma elementos del array botones, que son los id de los botones
+                        document.getElementById(boton).innerHTML = opcion;
+                        //el opcion debe meterse en el botón 1, que es el que tiene id rta 1, que es la posición 0 del array botones
+                    }
+                }
+                
+                //Previene que se sigan lanzando preguntas si se supera o iguala el largo del array y se reinicia el juego
+                if(indice>=preguntas.length){ 
+                    alert('¡Terminó el juego! Obtuviste ' +puntaje+ ' puntos. El juego se reiniciará.');
+                    reiniciar();
+                    } 
+
+                //PARA IMAGENES    
+                let nIma  = imagenes[indice]; //creo una variable que guarda el dato del array imagenes, que coincida con el valor del índice
+                document.getElementById('fotoss').src='img/'+nIma+'.jpg'; //source de la imagen que coincida con el imagenes[indice]
+            }
+
+
+
+            function devolverPosicion(identidad){ //esta función permite obtener el contenido tipo string de los botones, para poder compararlo con la respuuesta correcta
+                contenido = document.getElementById(identidad).innerHTML; //el contenido será el innerhtml de cada botón, que cambia según el id (identidad) que tenga. No usamos la palabra id porque creemos que era reservada
+
+                if(contenido == respuestas[r]){ //recorre el array de respuestas, que contiene las respuestas correctas en el orden en que aparecen las preguntas 
+                    alert('Respuesta correcta');
+                    puntaje += 10; //suma 10 puntos al puntaje
+                    indice++; //aumenta el índice para que funcione bien la funcion sortearpregunta().
+                }
+
+                if (contenido !==respuestas[r]){ //si lo respondido es diferente a la respuesta correcta
+                    alert('Respuesta incorrecta');
+                    puntaje -=5; //resta 5 puntos al puntaje
+                    indice++; //aumenta el índice para que funcione bien la funcion sortearpregunta().
+                }
+
+                r++; //recorre el array de respuestas sumandole 1 a r cada vez que termina la función
+                
+                document.getElementById('puntaje').innerHTML = 'Tu puntaje es: '+ puntaje +' puntos'; //muestra el puntaje en el id "puntaje"
+                
+                
+                if(puntaje<=0){
+                    alert('¡Perdiste! Te quedaste sin puntos. El juego se reiniciará.');
+                    reiniciar(); //si el juego no sigue, no aumenta el índice, y reinicia (en la función reiniciar)
+                }
+            }
+
+            function reiniciar(){ //cuando esta función es llamada, la página se recarga así el juego se reinicia.
+                location.reload();
+
+                /*r = 0;
+                puntaje = 0;
+                indice = 0;
+                document.getElementById('puntaje').innerHTML = puntaje; //reinicia puntaje y lo muestra
+                iniciar();*/
+            }
+        </script>
+    </head>
+    <body>
+        <div class="contenedor">
+            <header>
+                <h1>Juegazos.com</h1>
+                <h2 id="subtitulo-importante">Juego de preguntas y respuestas</h2>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ejercicio-1.html">Juego de cartas</a></li>
+                    <li><a href="ejercicio-2.html">Juego de dados</a></li>
+                    <li><a href="biografia.html">Quiénes somos</a></li>
+                </ul>
+            </nav>
+            <main>
+                <section class="seccion-columnas">
+                    <article class="columna">
+                        <h3 id="titulo"><strong>Cómo jugar</strong></h3>
+                        <p id="pregunta">
+                            Se irán mostrando preguntas (en total 5) de cultura general y se mostrarán 4 posibles respuestas. Debés elegir la respuesta que consideres correcta. <br>
+                            Comenzás teniendo 10 puntos.<br>
+                            Si adivinás, <strong>sumarás 10 puntos.</strong><br>
+                            Si no adivinás, se pasa a la siguiente pregunta y a su vez<strong> restarás 5 puntos.</strong> <br>
+                            <strong>Perderás cuando te quedes sin puntos. El juego se reinciará si se terminan las preguntas.</strong>
+                        </p>
+                        <button id="rta1" onclick="devolverPosicion('rta1'); iniciar();"></button>
+                        <button id="rta2" onclick="devolverPosicion('rta2');iniciar();"></button>
+                        <button id="rta3" onclick="devolverPosicion('rta3');iniciar();"></button>
+                        <button id="rta4" onclick="devolverPosicion('rta4');iniciar();"></button>
+
+                        <button id="boton-inicio" onclick="iniciar();">Comenzar a jugar</button><br>
+                        <button id="reinicio" onclick="reiniciar();">Volver a jugar</button><br>
+
+                        <h3 id="points">Puntaje</h3>
+                        <p id="puntaje"></p>
+                    </article>
+                    <article class="columna">
+                        <img id="fotoss" src="img/portada-preguntas.jpg" alt="Portada preguntas y respuestas">
+                    </article>
+                </section>
+                <script>
+
+                </script>
+            </main>
+            <footer>
+                <p id="parrafo-footer">Hecho por Jessica Arazi y Matias Wainberg</p>
+            </footer>
+        </div>
+    </body>
+</html>

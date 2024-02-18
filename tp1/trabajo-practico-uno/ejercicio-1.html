@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Juego de cartas</title>
+        <link href="estilos.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+        <script>
+                //---DECLARACIÓN DE VARIABLES---
+                var mazo = [1,2,3,4,5,6,7,8,9,10,'Ganás 10 puntos','Ganás 10 puntos','Reiniciás el puntaje','Duplicás tu apuesta']; //creamos un array que simula un mazo de cartas, donde "ganás 10 puntos" está dos veces para aumentar su frecuencia
+                var sorteado;
+                var puntaje;
+                var carta;
+                var primera = true;
+
+                //---DECLARACIÓN DE FUNCIONES---
+                function iniciar(){
+                    document.getElementById('botoninicio').style.display = 'none'; //agarra el boton de inicio y lo oculta
+                    document.getElementById('reglas-juego').style.display = 'none'; //agarra el elemento con id instrucciones y lo oculta
+                    document.getElementById('apostar-uno').style.display = 'block'; //agarra el botón con el id correspondiente y lo muestra en bloque ya que estaba oculto
+                    document.getElementById('apostar-tres').style.display = 'block'; //agarra el botón con el id correspondiente y lo muestra en bloque ya que estaba oculto
+                    document.getElementById('apostar-cinco').style.display = 'block'; //agarra el botón con el id correspondiente y lo muestra en bloque ya que estaba oculto
+                    document.getElementById('apostar-menor-uno').style.display = 'block'; //agarra el botón con el id correspondiente y lo muestra en bloque ya que estaba oculto
+                    document.getElementById('apostar-menor-tres').style.display = 'block'; //agarra el botón con el id correspondiente y lo muestra en bloque ya que estaba oculto
+                    document.getElementById('apostar-menor-cinco').style.display = 'block'; //agarra el botón con el id correspondiente y lo muestra en bloque ya que estaba oculto
+                    
+                    document.getElementById('seccion-puntos').style.display = 'block'; //agarra la sección donde se muestran los puntos y la muestra ya que estaba oculta
+                    document.getElementById('carta').style.display = 'flex'; //agarra la sección donde se muestra la carta y la muestra en bloque ya que estaba oculta
+
+                    document.getElementById('M').style.display = 'block'; 
+                    document.getElementById('m').style.display = 'block';
+                    document.getElementById('reglas').style.display = 'block';
+
+                    puntaje = 5; //se genera un puntaje inicial, que arranca en 5 pero luego se va modificando, por eso es variable
+                    document.getElementById('record').innerHTML = puntaje + ' puntos'; //para que en primera instancia escriba 5 puntos en el récord
+                    apostar(); //se ejecuta la función apostar para que se muestre una primera carta para empezar a jugar
+                }
+
+                function terminar(){
+                    location.reload();
+
+                }
+
+                function apostar(){
+                    let numerorandom = Math.floor(Math.random()*mazo.length); //agarra un número random entre 0 y 14 incluidos(porque el array tiene 15 elementos y 14 posiciones). Usa let porque solamente sirve para esta estructura
+                    carta = mazo[numerorandom]; //toma al número anterior como posición del array y genera una carta "aleatoria" según la posición random
+                    
+                    if (primera == true && (carta == 'Duplicás tu apuesta' || carta == 'Ganás 10 puntos' || carta == 'Reiniciás el puntaje')){ //si en la primera ronda (primera = true) sale cualquiera de las cartas especiales, vuelve a tirar
+                        numerorandom = Math.floor(Math.random()*mazo.length); //agarra un número random entre 0 y 14 incluidos(porque el array tiene 15 elementos y 14 posiciones). Usa let porque solamente sirve para esta estructura
+                        carta = mazo[numerorandom]; //toma al número anterior como posición del array y genera una carta "aleatoria" según la posición random
+                        while (carta == 'Duplicás tu apuesta' || carta == 'Ganás 10 puntos' || carta == 'Reiniciás el puntaje'){ //si cuando vuelve a tirar, vuelve a salir una especial, que vuelva a tirar
+                            numerorandom = Math.floor(Math.random()*mazo.length); //agarra un número random entre 0 y 14 incluidos(porque el array tiene 15 elementos y 14 posiciones). Usa let porque solamente sirve para esta estructura
+                            carta = mazo[numerorandom]; //toma al número anterior como posición del array y genera una carta "aleatoria" según la posición random
+                        }
+                        primera = false; //se "termina" la primera ronda, marcando a primera como false.
+                    }
+                    
+                    document.getElementById('carta').innerHTML = carta; //agarra el id "carta", que es donde se mostrará el puntaje
+                    sorteado = carta; //creo una variable "sorteado" que almacene el valor que salió de la carta para usarla luego
+                }
+
+                function evaluar (apuesta,eleccion){ //en apuesta iria 5, 3 o 1. En elección mayor o menor
+                    let anterior = sorteado; //creo una variable que almacene el resultado sorteado anteriormente para luego poder comparar el actual
+                    apostar(); //crea un nuevo número sorteado a través de la función apostar
+
+                    //--CARTAS ESPECIALES--
+                    while (sorteado == 'Duplicás tu apuesta' || sorteado == 'Ganás 10 puntos' || sorteado == 'Reiniciás el puntaje') {
+                        if (sorteado == 'Duplicás tu apuesta'){
+                            apuesta *= 2;
+                            alert('Duplicás tu apuesta para la siguiente jugada. Se tirará la siguiente carta al aceptar.');
+                        }
+                        else if (sorteado == 'Ganás 10 puntos'){
+                            puntaje += 10;
+                            alert('Ganás 10 puntos. Se sumarán 10 puntos a tu puntaje actual y se tirará la siguiente carta al aceptar.');
+                        }
+                        else if (sorteado == 'Reiniciás el puntaje'){
+                            puntaje = 5;
+                            alert('Reiniciás el puntaje. Se tirará la siguiente carta al aceptar.');
+                        }
+
+                        apostar(); //debe volver a apostar para no comparar el sorteado, que sería "Duplicás tu apuesta" o "ganás 10 puntos" o "reiniciás el puntaje". Si el nuevo apostar sale que el sorteado es alguna de las cartas especiales, vuelve a entrar al while y vuelve a repetir todo                    
+                    }
+                    
+                    //--CARTAS NUMÉRICAS--
+
+                        //se mete en estos if, dependiendo si el parámetro "eleccion" es mayor o menor, que depende de los botones
+                        if (eleccion == 'mayor'){
+                            if (sorteado > anterior) { //si acierta, es decir, si la carta siguiente es mayor que la anterior:
+                            puntaje += apuesta; //lo que hace es sumar la cantidad apostada al puntaje, que dependerá de el botón (5, 3 o 1) que eligió
+                            } else if (sorteado < anterior) {
+                            puntaje -= apuesta;
+                            }
+                        }
+                        
+                        if (eleccion == 'menor'){
+                            if (sorteado < anterior) { //si acierta, es decir, si la carta siguiente es menor que la anterior:
+                            puntaje += apuesta; //lo que hace es sumar la cantidad apostada al puntaje, que dependerá del botón (5, 3 o 1) elegido
+                            } else if (sorteado > anterior) { //si no acierta, es decir, si la carta siguiente es mayor que la anterior:
+                            puntaje -= apuesta; //resta la cantidad apostada al puntaje, que dependerá del botón (5, 3 o 1) elegido
+                            }
+                        }
+                        
+                    document.getElementById('record').innerHTML = puntaje + ' puntos'; //Una vez que ya tiene el puntaje guardado, lo escribe en el documento en el id "record", excepto que el puntaje sea menor o igual a cero, que finaliza el juego con la función terminar:
+
+                    //--Situaciones en las cuales se reinicia el juego
+                    if (puntaje <= 0){ //si pierde
+                        alert('Perdiste, el juego se reiniciará al aceptar.')
+                        terminar();
+                    }
+                    if (puntaje >= 50){ //si gana
+                        alert('¡Ganaste! Acumulaste'+puntaje+' cantidad de puntos. El juego se reiniciará al aceptar.')
+                    }
+
+                }
+                function mostrarReglas(){
+                    status = document.getElementById('instrucciones').style.visibility;
+
+                    if(status == 'hidden'){
+                        document.getElementById('instrucciones').style.visibility='visible';
+                    } else{
+                        document.getElementById('instrucciones').style.visibility='hidden';
+                        }
+                }
+            </script>
+    </head>
+    <body >
+        <div class="contenedor">
+            <header>
+                <h1>Juegazos.com</h1>
+                <h2 id="subtitulo-importante">Juego de cartas</h2>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ejercicio-2.html">Juego de dados</a></li>
+                    <li><a href="ejercicio-3.html">Juego de preguntas</a></li>
+                    <li><a href="biografia.html">Quiénes somos</a></li>
+                </ul>
+            </nav>
+            <main>
+                <section id="reglas-juego" class="articulo">
+                    <h2>Cómo jugar</h2>
+                    <p id="instrucciones">
+                        <strong>Objetivo del juego:</strong> En este juego, el objetivo principal es acumular puntos hasta alcanzar 50 o más. Por otro lado, debes evitar caer por debajo de 0 puntos, ya que esto resultaría en una derrota.<br>
+
+                        <strong>Funcionamiento del juego</strong>: El jugador comienza con 5 puntos al inicio del juego. Se procede a revelar una carta para dar inicio al juego.
+
+                        El jugador debe realizar una apuesta sobre si la próxima carta será de un valor mayor o menor que la carta inicialmente mostrada. En cada apuesta, el jugador puede elegir apostar 1, 3 o 5 puntos.
+
+                        Si la apuesta resulta correcta, el jugador ganará la misma cantidad de puntos que apostó. Por otro lado, si la apuesta es incorrecta, perderá los puntos apostados. Si, por casualidad, aparece una carta con el mismo valor que la anterior, la apuesta no tendrá ningún efecto sobre los puntos.
+
+                        Después de realizar la apuesta, se revela la siguiente carta y se actualizan los puntos del jugador. <br>Por ejemplo, si la primera carta es un 4 y el jugador apuesta que la siguiente carta será mayor, apostando 3 puntos, y la siguiente carta es un 7, el jugador ganará 3 puntos, resultando en un total de 8 puntos.
+
+                        <br>Además, existen tres cartas especiales o comodines:<br>
+
+                        - La primera carta especial otorga al jugador 10 puntos, independientemente de la cantidad apostada.<br>
+
+                        - La segunda carta especial duplica la apuesta del jugador, lo que significa que podría ganar el doble de puntos o perder el doble de puntos apostados.<br>
+
+                        - La tercera carta especial reinicia el puntaje del jugador a 5 puntos.<br>
+
+                        <br><strong>Si sale alguna carta especial, se le avisará con una alerta de la página.</strong><br>
+
+                        ¿Todo listo? ¡Que comience el juego!
+                    </p>
+                    <button id="botoninicio" onclick="iniciar()">Iniciar juego</button>
+                    <button id="reglas" onclick="mostrarReglas();">Reglas del juego</button>
+                </section>
+                <section class="seccion-columnas">
+                    
+                    <article class="columna centrado-columna">
+                    <h3 id="M">Mayor</h3>
+                    <button class="botones-apuesta" id="apostar-cinco" onclick="evaluar(5,'mayor')">Apostar 5 puntos</button>
+                    <button class="botones-apuesta" id="apostar-tres" onclick="evaluar(3,'mayor')">Apostar 3 puntos</button>
+                    <button class="botones-apuesta" id="apostar-uno" onclick="evaluar(1,'mayor')">Apostar 1 punto</button>
+                    </article>
+
+                    <article class="columna centrado-columna">
+                        <div id="carta"></div>
+                    </article>
+
+                    <article class="columna centrado-columna">
+                    <h3 id="m">Menor</h3>
+                    <button class="botones-apuesta" id="apostar-menor-cinco" onclick="evaluar(5,'menor')">Apostar 5 puntos</button>
+                    <button class="botones-apuesta" id="apostar-menor-tres" onclick="evaluar(3,'menor')">Apostar 3 puntos</button>
+                    <button class="botones-apuesta" id="apostar-menor-uno" onclick="evaluar(1,'menor')">Apostar 1 punto</button>
+                    </article>
+                </section>
+
+                <section id="seccion-puntos" class="articulo">
+                    <h3>Puntaje total</h3><br>
+                    <p id="record"></p>
+                </section>
+            </main>
+            <footer>
+                <p id="parrafo-footer">Hecho por Jessica Arazi y Matias Wainberg</p>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Juegos</title>
+        <link href="estilos.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+        <script>
+        var imgg1 = true;
+        var imgg2 = true;
+        var imgg3 = true;
+
+
+            function favoritos1(){ //cambia el src de la imagen de like o dislike
+                
+                if (imgg1 == true){
+                    document.getElementById('img1').src='img/dislike.jpg';
+                    imgg1 = false;
+                    } else {
+                    document.getElementById('img1').src='img/like.jpg';
+                    imgg1 = true;
+                }    
+            }
+            
+            function favoritos2(){ //cambia el src de la imagen de like o dislike
+                if (imgg2 == true){
+                    document.getElementById('img2').src='img/dislike.jpg';
+                    imgg2 = false;
+                } else{
+                    document.getElementById('img2').src='img/like.jpg';
+                    imgg2 = true;
+                }    
+            }
+            function favoritos3(){ //cambia el src de la imagen de like o dislike
+                if (imgg3 == true){
+                    document.getElementById('img3').src='img/dislike.jpg';
+                    imgg3 = false;
+                } else{
+                    document.getElementById('img3').src='img/like.jpg';
+                    imgg3 = true;
+                }    
+            }
+        </script>
+    </head>
+    <body>
+        <div class="contenedor">
+            <header>
+                <h1>Juegazos.com</h1>
+                <h2 id="subtitulo-importante">Los mejores juegos de toda la internet!</h2>
+                <h4>Alumnos: Jessica Arazi y Matias Wainberg<br>Turno Noche<br>Informática General<br>Primer trabajo practico 2023</h4>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="ejercicio-1.html">Juego de cartas</a></li>
+                    <li><a href="ejercicio-2.html">Juego de dados</a></li>
+                    <li><a href="ejercicio-3.html">Juego de preguntas</a></li>
+                    <li><a href="biografia.html">Quiénes somos</a></li>
+                </ul>
+            </nav>
+            <main>
+                <section>
+                    <article class="articulo">
+                        <h3><a href="ejercicio-1.html">Juego nro 1: adivinar la siguiente carta</a></h3>
+                        <p>
+                        Objetivo del juego
+                                En cada turno el jugador deberá apostar una cantidad de puntos y adivinar si la siguiente carta será mayor o menor. De esta manera podrá ir sumando o restando puntos. Si llega a 50 puntos o más, gana el juego. Si llega a 0 puntos o menos, pierde.
+                        <br>
+                        </p>
+                        <div class="centrado">
+                            <img src="img/cartas.jpg" alt="Cartas">
+                        </div>
+                        <img src="img/like.jpg" alt="like" class="like" id="img1" onclick="favoritos1();">
+                    </article>
+                </section>
+                <section>
+                    <article class="articulo">
+                        <h3><a href="ejercicio-2.html">Juego nro 2: juego de dados a elección</a></h3>
+                        <p>
+                            Desarrollar un juego de dados a elección. La definición del objetivo y del funcionamiento del juego son a elección. Deberá ser un juego de complejidad media o alta que requiera para su resolución el uso de todas las estructuras estudiadas hasta el momento (condicionales, repetitivas, funciones y arrays). En la página deberán estar escritas las reglas del juego. La complejidad del juego se establece en función de la cantidad de jugadores, el uso de turnos o rondas, el cálculo de puntaje, la definición de ganadores y perdedores, entre otros.
+                        </p>
+                        <div class="centrado">
+                            <img src="img/dados.jpeg" alt="Dados">
+                        </div>
+                        <img src="img/like.jpg" alt="like" class="like" onclick="favoritos2();" id="img2">
+                    </article>
+                    <article class="articulo">
+                        <h3><a href="ejercicio-3.html">Juego nro 3: juego de preguntas a elección</a></h3>
+                        <p>
+                            Desarrollar un juego de preguntas a elección. La definición del objetivo y del funcionamiento del juego son a elección. Deberá ser un juego de complejidad baja o media que requiera para su resolución el uso de todas las estructuras estudiadas hasta el momento (condicionales, repetitivas, funciones y arrays). En la página deberán estar escritas las reglas del juego. La complejidad del juego se establece en función de la cantidad de jugadores, preguntas y opciones, el uso de turnos o rondas o niveles, el cálculo de puntaje, la definición de ganadores y perdedores, entre otros.
+                        </p>
+                        <div class="centrado">
+                            <img src="img/preguntas.jpg" alt="Preguntas">
+                        </div>
+                        <img src="img/like.jpg" alt="like" class="like" onclick="favoritos3();" id="img3">
+                    </article>
+                </section>
+            </main>
+            <footer>
+                <p id="parrafo-footer">Hecho por Jessica Arazi y Matias Wainberg</p>
+            </footer>
+        </div>
+    </body>
+</html>

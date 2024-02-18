@@ -1,0 +1,246 @@
+body{
+    background-image: url(img/fondo.jpg);
+    background-repeat: repeat;
+    background-size: 300px;
+    font-family: 'Roboto', sans-serif;
+    color: #1f1b24;
+}
+.contenedor{
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #056c41;
+    padding: 15px;
+    border-radius: 25px;
+}
+.centrado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 3em;
+    color: white;
+}
+h2{
+    font-size: 1.8em;
+    color: #1f1b24;
+
+}
+h3{
+    font-size: 1.5em;
+}
+h4{
+    font-size: 1em;
+    color: whitesmoke;
+}
+p{
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+}
+#subtitulo-importante{
+    font-size: 2.2em;
+    font-weight:600;
+    color: whitesmoke;
+}
+header{
+    background-color: #1cb47c;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 25px;
+
+}
+nav{
+    background-color: #1cb47c;
+    padding: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 25px;
+
+}
+li{
+    display: inline;
+    padding: 5px;
+    margin: 10px;
+    border: 5px outset;
+    border-radius: 25px;
+    background-color: whitesmoke;
+
+}
+ul {
+	margin:10px;
+	list-style-type:none;
+}
+a{
+    text-decoration: none;
+    font-size: 1em;
+    margin: 5px;
+    padding: 2px;
+    color: #1f1b24;
+}
+a:hover{
+    color: #ffffff;
+    background-color: #d3362e;
+    border-radius: 25px;
+    margin: 5px;
+    padding: 2px;
+}
+a:visited{
+    display: none;
+}
+
+.articulo{ /*esto es sección*/
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    margin: 10px;
+    padding: 15px;  
+    border-radius: 25px;
+    
+}
+.seccion-columnas{
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    margin: 10px;
+    padding: 15px;  
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+.columna{
+    margin: 10px;
+    width: 50%;
+}
+
+img{
+    width: 400px;
+    height: auto;
+    border-radius: 25px;
+}
+footer{
+    background-color: #1cb47c;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 25px;
+}
+#parrafo-footer{
+    font-style: italic;
+    margin: 10px;
+    color: white;
+}
+
+button{
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 400;
+    border-color: #056c41;
+}
+button:hover{
+    background-color: rgb(48, 126, 48);
+    color: whitesmoke;
+}
+/*ESTILOS INDEX */
+.like{
+    width: 50px;
+    height: 50px;
+    
+}
+
+/*ESTILOS EJERCICIO 1*/
+
+.botones-apuesta{
+    display: none;
+}
+
+#seccion-puntos{
+    display: none;
+}
+
+#M{
+    display: none;
+}
+
+#m{
+    display: none;
+}
+
+#reglas{
+    display: none;
+}
+
+.botones-apuesta{
+    display: none;
+}
+
+#seccion-puntos{
+    display: none;
+}
+
+#carta{
+    display: none;
+    background-color: rgb(241, 95, 95);
+    width: 100px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* ESTILOS EJERCICIO 2 */
+
+#fotodado {
+width:150px;
+height: 150px;
+}
+
+#juego{
+    display: none;
+}
+#foto{
+    display: none;
+}
+.fotos-juegos{
+    width: 100px;
+    height: auto;
+}
+
+/*ESTILOS EJERCICIO 3*/
+
+#rta1, #rta2, #rta3, #rta4, #reinicio, #points{
+    display: none;
+}
+
+#fotoss{
+    width: 400px;
+    height: auto;
+}
+
+/* ESTILOS BIOGRAFIA */ 
+
+.fotomeme {
+width: 300px;
+height: 200px;
+margin: 10px;
+} 
+
+#jessi, #mati{
+    text-align: center;
+    background-color: #56ac8c;
+    border-radius: 25px;
+    margin: 10px;
+}
+#mati{
+    background-color: #b41f1c;
+}
+.cambiazo{
+font-family: Arial Black; 
+font-weight: bold; 
+font-size: 30px; 
+color: #fff; 
+text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+}

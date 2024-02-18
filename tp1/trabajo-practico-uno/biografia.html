@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Sobre nosotros</title>
+        <link href="estilos.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+        <script>
+            var cambio;
+            function cambiar(nombre){ //cambia el estilo del nombre según la clase que tenga asignada
+                if (document.getElementById(nombre).className =='hola'){
+                    document.getElementById(nombre).className = 'cambiazo';
+
+                }else if (document.getElementById(nombre).className == 'cambiazo'){
+                    document.getElementById(nombre).className = 'hola';
+                }
+                
+            }
+        </script>
+    </head>
+    <body>
+        <div class="contenedor">
+            <header>
+                <h1>Quiénes somos</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ejercicio-1.html">Juego de cartas</a></li>
+                    <li><a href="ejercicio-2.html">Juego de dados</a></li>
+                    <li><a href="ejercicio-3.html">Juego de preguntas</a></li>
+                </ul>
+            </nav>
+            <main>
+                <section class="seccion-columnas">
+                    <article class="columna" id="jessi">
+                        <h3 id="titulo-jessi" class="hola">Jessi Arazi</h3>
+                        <button onclick="cambiar('titulo-jessi');">Hacer efecto</button>
+                        <h4> Apodo: Je </h4>
+                        <h5>Meme que me representa:</h5>
+                        <img class="fotomeme" src="img/michael-scott.jpg" alt="Meme Michael Scott" > 
+                    </article>
+                    <article class="columna" id="mati" >
+                        <h3 id="titulo-mati" class="hola">Mati Wainberg</h3>
+                        <button onclick="cambiar('titulo-mati');">Hacer efecto</button>
+                        <h4> Apodo: Wain </h4>
+                        <h5>Meme que me representa:</h5>
+                        <img class="fotomeme" src="img/meme-mati.jpg" alt="Meme perritos">
+                    </article>
+                </section>
+            </main>
+            
+            <footer>
+                <p id="parrafo-footer">Hecho por Jessica Arazi y Matias Wainberg</p>
+            </footer>
+        </div>
+        
+    </body>
+</html>
