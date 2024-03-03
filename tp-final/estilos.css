@@ -114,3 +114,41 @@ li{
 .negro{
     color: rgb(20,20,20);;
 }
+.link{
+    color: rgb(216, 216, 216);;
+}
+.contact-input{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    margin: 15px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+.contact-input:focus{
+    border: 2px solid rgb(255, 127, 1);
+}
+.contact-input::placeholder{
+    color: rgb(197, 191, 185);
+}
+.contacto-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+#tabla{
+    border-radius: 20px;
+}
+#enviar{
+    padding: 15px 30px;
+    font-size: 20px;
+    font-style: oblique;
+    color: white;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, rgb(65, 63, 63), rgb(255, 127, 1));
+}

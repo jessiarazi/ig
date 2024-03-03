@@ -34,6 +34,14 @@
                     document.formulario.email.focus();
                     return false;
                 }
+                
+                if (document.formulario.grado.value.length==0){
+                    alert ("Por favor, colocá tu grado máximo de escalada en roca");
+                    document.formulario.grado.focus();
+                    return false;
+                }
+
+                
 
                 alert("¡Muchas gracias por enviar tu formulario! Nos pondremos en contacto a la brevedad. No olvides chequear tu casilla de spam.");
                 document.formulario.submit();
@@ -42,46 +50,104 @@
         </script>
     </head>
     <body>
-        <header>
-
-        </header>
+        <header class="sticky-top">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="img/icono.png" alt="logo" width="50" height="50" class="d-inline-block align-text-top"></a> <!--ver si queda mejor sin texto-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Escaladoras
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="mujeres.html">Mujeres en la escalada</a></li>
+                        <li><a class="dropdown-item" href="logros.html">Grandes logros</a></li>
+                        <li><a class="dropdown-item" href="foro.html">Foro</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Viajeros
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="viajes.html">Viajes de escalada</a></li>
+                        <li><a class="dropdown-item" href="lugares.html">Lugares en Argentina</a></li>
+                        <li><a class="dropdown-item" href="form.html">¡Seamos compañeros!</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Escalada deportiva
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="seguridad.html">Seguridad</a></li>
+                        <li><a class="dropdown-item" href="normas.html">Normas</a></li>
+                        <li><a class="dropdown-item" href="equipo.html">Equipo obligatorio</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="muros.html">Muros</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="juego.html">Juego</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="datos.html">Datos personales</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
         <main>
-            <section>
-                <h1>Conectá con tu próxima salida a la roca</h1>
-                <h3>¿Tenés ganas de escalar en la roca pero no tenés con quién? ¿Querés salir con personas que escalen similar a vos? ¡Te ayudamos! A través del formulario de contacto vas a poder conectar con escaladores y escaladoras que también quieran salir a la roca y así podrás encontrar a tus compañeros ideales.</h3>
-                <p>Completá el siguiente formulario para que podamos contactarte con personas que tengan tus mismos intereses y nivel de escalada. No vamos a compartir tus datos con nadie, solamente los usaremos para brindarte la mejor experiencia.<br> Al enviar el formulario, analizaremos tus datos y nos pondremos en contacto con vos para conectarte con tus compañeros ideales.</p>
-                <form action="" method="post" name="formulario" id="formulario"> <!--ver tema action mailto qué dirección poner-->
-                    <label for="nombre">Nombre *</label>
-                    <input type="text" name="nombre" id="nombre" required> <br>
-                    <label for="apellido">Apellido *</label>
-                    <input type="text" name="apellido" id="apellido" required><br>
-                    <label for="email">Email *</label>
-                    <input type="email" name="email" id="email" placeholder="ejemplo@gmail.com" required><br>
-                    <label for="lugar">Lugar de escalada de preferencia</label>
-                    <select name="lugar" id="lugar">
+            <section class="parrafo-normal m-3 p-3">
+                <h1 class="display-1">Conectá con tu próxima salida a la roca</h1>
+                <h6 class="col-10 display-4">¿Tenés ganas de escalar en la roca pero no tenés con quién? ¿Querés salir con personas que escalen similar a vos?</h3>
+                <p class="col-10 display-6">Completá el siguiente formulario para que podamos contactarte con personas que tengan tus mismos intereses y nivel de escalada. No vamos a compartir tus datos con nadie, solamente los usaremos para brindarte la mejor experiencia.<br> Al enviar el formulario, analizaremos tus datos y nos pondremos en contacto con vos para conectarte con tus compañeros ideales.</p>
+                <div class="contacto-container">
+                <form action="https://api.web3forms.com/submit" method="POST" name="formulario" id="formulario" class="contacto-left">
+                    <input type="hidden" name="access_key" value="c8dd5667-811b-47b3-9328-02980e616ee6">
+                    
+                    <input type="text" name="nombre" id="nombre" placeholder="Tu nombre*" required class="contact-input"> <br>
+                    <input type="text" name="apellido" id="apellido" placeholder="Tu apellido*" required class="contact-input"><br>
+                    <input type="email" name="email" id="email" placeholder="Tu dirección de correo electrónico*" required class="contact-input"><br>
+                    <label for="grado">Tu grado de escalada máximo en roca en escala francesa <a href="#tabla" class="link">(ir a tabla de conversión)</a> *</label><br>
+                    <input type="text" name="grado" id="grado" placeholder="6a+" required class="contact-input"><br>
+                    <br>
+                    <label for="lugar">Lugar de escalada de preferencia</label><br>
+                    <select name="lugar" id="lugar" class="contact-input">
                         <option>No tengo preferencia</option>
                         <option>Buenos Aires</option>
                         <option>Córdoba</option>
                         <option>Mendoza</option>
                         <option>Bariloche</option>
                         <option>San Luis</option>
-                      </select> <br>
-                    <label for="grado">Tu grado de escalada máximo en roca en escala francesa <a href="#tabla">(tabla de conversión)</a> *</label>
-                    <input type="text" name="grado" id="grado" placeholder="6a+" required><br>
-                    <label for="preferencia">Preferencia de compañeros/as</label>
-                    <select name="preferencia" id="preferencia">
+                      </select> <br><br>
+                    
+                    <label for="preferencia">Preferencia de compañeros/as</label><br>
+                    <select name="preferencia" id="preferencia" class="contact-input">
                         <option>No tengo preferencia</option>
                         <option>Solo mujeres</option>
                         <option>Solo hombres</option>
                         <option>Mixto</option>
-                    </select> <br>
-                    <label for="objetivos">Comentanos brevemente cuáles son tus objetivos en tu próxima salida a la roca</label>
-                    <input type="text" name="objetivos" id="objetivos"><br>
-                    <label for="comentarios">Dejanos tus comentarios u observaciones que consideres necesarias</label>
-                    <textarea type="text" name="comentarios" id="comentarios" cols="45" rows="5"></textarea><br>
-                    <input type="button" name="enviar" id="eniar" value="Enviar" onclick="validarFormulario()">
+                    </select> <br> <br>
+                    <label for="objetivos">Comentanos brevemente cuáles son tus objetivos en tu próxima salida a la roca</label><br>
+                    <input type="text" name="objetivos" id="objetivos" class="contact-input"><br>
+                    <label for="comentarios">Dejanos tus comentarios u observaciones que consideres necesarias</label><br>
+                    <textarea type="text" name="comentarios" id="comentarios" cols="45" rows="5" class="contact-input"></textarea><br>
+                    <input type="button" name="enviar" id="enviar" value="Enviar" onclick="validarFormulario()">
                 </form>
-                <img src="img/grados_escalada.png" alt="Tabla de conversión de grados de escalada." id="tabla">
+                
+            </div>
+            <div class="m-3 p-3 div-imagen"><img src="img/grados_escalada.png" alt="Tabla de conversión de grados de escalada." id="tabla"></div>
+                
             </section>
             
         </main>
