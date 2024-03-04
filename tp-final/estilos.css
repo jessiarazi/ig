@@ -152,3 +152,14 @@ li{
     border-radius: 50px;
     background: linear-gradient(270deg, rgb(65, 63, 63), rgb(255, 127, 1));
 }
+.foto-acompaña{
+    width: 900px;
+    height: auto;
+    float: right;
+    border-radius: 20px;
+}
+#foto-chequeo{
+    height: 600px;
+    width: auto;
+    border-radius: 20px;
+}

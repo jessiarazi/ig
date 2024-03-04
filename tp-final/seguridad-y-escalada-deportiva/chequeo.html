@@ -8,7 +8,7 @@
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-        <link href="estilos.css" rel="stylesheet">
+        <link href="../estilos.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -18,8 +18,8 @@
         <link rel="icon" href="img/icono.png">
     </head>
     <body>
-        <header class="sticky-top">
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <header class="">
+          <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
             <div class="container-fluid">
               <a class="navbar-brand" href="#"><img src="img/icono.png" alt="logo" width="50" height="50" class="d-inline-block align-text-top"></a> <!--ver si queda mejor sin texto-->
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,57 +73,37 @@
               </div>
             </div>
           </nav>
+          <img src="img/equipo-header.jpg" alt="Equipo de escalada deportiva" class="imagen-header">
         </header>
         <main>
           <section>
           <div class="container-fluid seccion-negro imagen-container m-3">
-                <h1 class="display-1">Seguridad en la escalada deportiva</h1>
-                <p class="display-4 col-10 parrafo-normal">La escalada deportiva requiere un equipo y comportamientos adecuados, para garantizar la seguridad a la hora de realizar la práctica. <br>Conocé la escalada deportiva, el equipo necesario y aspectos básicos a tener en cuenta a la hora de adentrarte en la escalada deportiva.</p>
+                <h1 class="display-1">Chequeo cruzado</h1>
+                <p class="display-6 col-10 parrafo-normal">El <strong>chequeo cruzado</strong> en la escalada deportiva es una práctica vital que implica que los escaladores revisen mutuamente su equipo y seguridad antes de iniciar la escalada. Este proceso incluye la verificación de nudos, arneses, mosquetones y cualquier otro equipo de protección para garantizar su correcto funcionamiento y ajuste.</p>
+                <p class="display-6 col-10 parrafo-normal">Realizar el chequeo cruzado es de suma importancia, ya que puede detectar errores potencialmente catastróficos que podrían conducir a accidentes graves durante la escalada. La revisión meticulosa del equipo y la confirmación mutua entre los compañeros no solo aumenta la seguridad personal de cada escalador, sino que también fortalece el sentido de responsabilidad y cuidado mutuo dentro de la comunidad de escalada.</p>
           </div>
           </section>
           <section>
-            <div class="container-fluid seccion-negro imagen-container m-3">
-              <h2 class="display-3">Qué es la escalada deportiva</h2>
-              <p class="col-8 parrafo-normal">La escalada deportiva es una disciplina que consiste en ascender paredes naturales o artificiales utilizando únicamente la fuerza física y técnica del escalador, así como un equipo específico compuesto por cuerdas, arneses, mosquetones y otros dispositivos de seguridad. A diferencia de la escalada tradicional, donde se busca la conquista de una ruta a través de medios naturales, la escalada deportiva se centra en rutas preestablecidas que suelen contar con anclajes fijos y protecciones permanentes. <br><br>
-                La seguridad en la escalada deportiva es fundamental por varias razones. En primer lugar, la naturaleza vertical y desafiante de esta actividad la hace intrínsecamente peligrosa, con el potencial de sufrir caídas desde alturas significativas. Por lo tanto, el uso adecuado del equipo de seguridad, así como la correcta técnica de aseguramiento y progresión, son indispensables para minimizar el riesgo de accidentes graves.<br><br>
-                Además, la escalada deportiva se practica en entornos naturales frágiles, donde la preservación del medio ambiente es crucial. Un comportamiento seguro por parte de los escaladores garantiza que se minimice el impacto negativo en el ecosistema circundante, evitando daños a la flora, la fauna y la estructura geológica de las paredes de escalada.<br><br>
-                Otro aspecto importante de la seguridad en la escalada deportiva es la responsabilidad hacia uno mismo y hacia los demás compañeros de escalada. El cuidado y la atención meticulosa a los procedimientos de seguridad no solo protegen al escalador individual, sino que también garantizan la seguridad de los compañeros de cordada y de cualquier persona que pueda estar cerca de la zona de escalada.
-            </p>
+            <h2 class="display-3 m-3">Cómo realizar un chequeo cruzado</h2>
+
+            <div class="row">
+                <div class="seccion-negro m-3 col-md-6">
+                    <p class="parrafo-normal">Los participantes de la cordada, el escalador y el asegurador, deben chequear mutuamente los siguientes puntos:</p>
+                    <ol>
+                      <li>Arneses: se chequea que las hebillas de los arneses estén correctamente.</li>
+                      <li>Doble punto de encordamiento: el escalador debe tener un nudo anclado a dos puntos de su arnés.</li>
+                      <li>Dispositivo de aseguramiento: asegurar que el dispositivo funcione correctamente, que la cuerda esté pasada por el lado correcto, y que esté cerrado su mosquetón.</li>
+                      <li>Cascos: se chequea que los cascos estén bien colocados cubriendo la frente.</li>
+                      <li>Nudo de fin de cuerda: se chequea que la cuerda tenga un nudo en su fin.</li>
+                      <li>Material necesario: se chequea que el escalador comience su escalada con el material necesario.</li>
+                    </ol>
+                    
+                </div>
+                <img src="img/chequeo-cru.jpg" class="img-fluid col-md-6" alt="Chequeo cruzado (Singing Rock)." id="foto-chequeo">
             </div>
           </section>
-          <section class="seccion-negro m-3">
-            <div class="container">
-              <div class="row">
-                  <div class="col-md-3">
-                      <a href="equipo.html" class="card m-3 p-1">
-                          <img src="img/equipo.jpg" class="card-img-top p-2 imagen-card" alt="Equipo de escalada">
-                          <div class="card-body">
-                              <p class="h4">Equipo obligatorio</p>
-                          </div>
-                      </a>
-                  </div>
-                  <div class="col-md-3">
-                      <a href="#" class="card m-3 p-1">
-                          <img src="img/chequeo.jpg" class="card-img-top p-2" alt="Chequeo cruzado">
-                          <div class="card-body">
-                              <p class="h4">Chequeo cruzado</p>
-                          </div>
-                      </a>
-                  </div>
-                  <div class="col-md-3">
-                      <a href="#" class="card m-3 p-1">
-                          <img src="img/normas.png" class="card-img-top p-2" alt="Normas en la escalada">
-                          <div class="card-body">
-                              <p class="h4">Normas</p>
-                          </div>
-                      </a>
-                  </div>
-              </div>
-          </div>
-          </section>
-          
         </main>
-        <footer class="row">
+        <footer class="row m-3">
           <div class="col-12"><p class="text-center parrafo-footer">Desarrollado por Jessica Arazi <br> Año 2023 | Informática General | UNA Artes Multimediales </p></div>
         </footer>
     </body>
