@@ -163,3 +163,13 @@ li{
     width: auto;
     border-radius: 20px;
 }
+.carousel-item img {
+    max-width: 900px;
+    height: auto;
+    margin: auto;
+}
+#yo{
+    height: 450px;
+    width: auto;
+    float: right;
+}
