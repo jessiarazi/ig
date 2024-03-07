@@ -2,24 +2,27 @@ html {
     scroll-behavior: smooth;
 }
 body{
-    background-color: rgb(20,20,20);
+    background-color: #332C2C;
 }
 
 .navbar, .dropdown-menu{
-    background-color: rgba(20, 20, 20, 0.95);
+    background-color: rgba(51, 44, 44, 0.95);
     box-shadow: 0 5px 4px 0 rgba(0,0,0,.2);
 }
-.navbar-brand, .nav-link, .dropdown-item{
+.navbar-brand, .nav-link{
     color: rgb(255, 127, 1);
+}
+.nav-link:hover{
+    color: rgb(216, 216, 216);
 }
 .active{
      color: rgb(184, 93, 3);
 }
 .seccion-principal{
-    background-color: rgb(20,20,20);
+    background-color: #332C2C;
 }
 .seccion-negro{
-    background-color: rgb(20,20,20)
+    background-color: #332C2C;
 }
 .abajo{
     z-index: 0;
@@ -29,7 +32,7 @@ body{
   top: 25%;
   left: 5%;
   width: 90%;
-  color: rgb(20,20,20);
+  color: #332C2C;
   padding: 20px;
   border-radius: 10px;
   text-align: left;
@@ -48,10 +51,10 @@ body{
     background-color: rgb(255, 127, 1);
 }
 .seccion-naranja-gradient{
-    background: linear-gradient(rgb(255, 127, 1), rgb(20,20,20));
+    background: linear-gradient(rgb(255, 127, 1), #332C2C);
 }
 .seccion-naranja-gradient-back{
-    background: linear-gradient(rgb(20,20,20), rgb(255, 127, 1));
+    background: linear-gradient(#332C2C, rgb(219, 142, 65));
 }
 .card {
     /* Add shadows to create the "card" effect */
@@ -67,7 +70,7 @@ body{
   }
   a{
     text-decoration: none;
-    color: black;
+    color: #332C2C;
     display: inline;
   }
   a:hover{
@@ -112,16 +115,16 @@ li{
     border-radius: 50px;
 }
 .parrafo-negro, .list-negro{
-    color: rgb(20,20,20);
+    color: #332C2C;
     font-weight: 300;
     font-style: normal;
     font-size: 1.2em;
 }
 .negro{
-    color: rgb(20,20,20);;
+    color: #332C2C;
 }
 .link{
-    color: rgb(216, 216, 216);;
+    color: rgb(216, 216, 216);
 }
 .contact-input{
     width: 400px;
@@ -148,18 +151,9 @@ li{
 #tabla{
     border-radius: 20px;
 }
-#enviar{
-    padding: 15px 30px;
-    font-size: 20px;
-    font-style: oblique;
-    color: white;
-    gap: 10px;
-    border: none;
-    border-radius: 50px;
-    background: linear-gradient(270deg, rgb(65, 63, 63), rgb(255, 127, 1));
-}
+
 .foto-acompaña{
-    width: 900px;
+    width: 850px;
     height: auto;
     float: right;
     border-radius: 20px;
@@ -184,7 +178,7 @@ li{
     height: 90%;
   }
   .embed-responsive-16by9 {
-    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    padding-bottom: 56.25%;
     position: relative;
     height: 0;
   }
