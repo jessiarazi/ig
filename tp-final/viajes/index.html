@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Viajes de escalada - Climbing 360°</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="../estilos.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Great+Vibes&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Great+Vibes&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="icon" href="../img/icono.png">
+    </head>
+    <body>
+      <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img src="../img/icono.png" alt="logo" width="50" height="50" class="d-inline-block align-text-top"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Viajes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../escaladoras/index.html">Escaladoras</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../seguridad-y-escalada-deportiva/index.html">Escalada deportiva</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../muros.html">Muros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../juego.html">Juego</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../datos.html">Datos personales</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+        <main class="m-3 p-3">
+          <h1 class="display-1 m-3">Viajes de escalada</h1>
+          <h2 class="display-4 m-3">¡Descubrilo todo!</h2>
+          <p class="col-10 parrafo-normal m-3">Los viajes de escalada ofrecen una oportunidad única para explorar nuevos terrenos, desafiar tus límites y sumergirte en la belleza natural del mundo que te rodea. Desde la majestuosidad de las montañas hasta la serenidad de los cañones, cada destino ofrece su propia experiencia única. Ya sea escalando en roca, hielo o montañas, cada viaje de escalada es una aventura emocionante que te lleva más allá de tu zona de confort y te conecta con la naturaleza de una manera profunda y significativa. Además de la escalada en sí, estos viajes ofrecen la oportunidad de conocer nuevas culturas, compartir experiencias con otros escaladores apasionados y crear recuerdos que durarán toda la vida.</p>
+
+          <div class="text-center">
+            <article>
+                <div id="carouselExampleCaptions" class="carousel slide">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="../img/fitz.jpg" class="d-block rounded img-fluid" alt="Aguja Fitz Roy">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Aguja Fitz Roy</h5>
+                        <p>El Chaltén, Santa Cruz, Argentina</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="../img/frey.jpg" class="d-block rounded img-fluid" alt="Agujas del Frey">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Agujas del Frey</h5>
+                        <p>Bariloche, Río Negro, Argentina</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="../img/piedra.jpg" class="d-block rounded img-fluid" alt="Piedra Parada">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Piedra Parada</h5>
+                        <p>Chubut, Argentina</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <a href="lugares.html">
+                  <button class="button-5 p-3 m-3">Explorar lugares de escalada en Argentina</button>
+                </a>
+              </article> 
+            </div>
+            <article>
+                <p class="parrafo-normal col-10 m-3">¡En un viaje de escalada, tenés la chance de explorar un montón de experiencias, desde la escalada deportiva hasta el boulder, ¡y para todos los niveles de habilidad!<br> Ya sea que estés arrancando tu aventura en la roca o que seas un escalador picante buscando nuevos desafíos, hay algo para todos. Desde escalar paredes altas hasta resolver problemas técnicos en rocas más bajas, cada día te trae una nueva aventura. Los viajes de escalada te dejan meter en la naturaleza y disfrutar de paisajes increíbles mientras te ponés a prueba física y mentalmente. Con la guía de expertos y el compañerismo de otros escaladores apasionados, cada momento se vuelve una experiencia inolvidable llena de aprendizaje y crecimiento personal. Así que preparate para vivir momentos emocionantes, superar tus límites y armar recuerdos que van a durar toda la vida en tu próximo viaje de escalada. ¡La aventura te espera!</p>
+              </article>
+              <div class="text-center">
+                <article>
+                    <div id="segundo" class="carousel slide container-fluid">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#segundo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#segundo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#segundo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                      <div class="carousel-inner container-fluid">
+                        <div class="carousel-item active">
+                          <img src="../img/boulder.jpg" class="d-block rounded img-fluid" alt="Boulder">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Boulder en roca</h5>
+                            <p>Modalidad de escalada sin cuerda en paredes bajas</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="../img/deportiva-roca.jpg" class="d-block rounded img-fluid" alt="Escalada deportiva en roca">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Deportiva en roca</h5>
+                            <p>Modalidad de escalada con cuerda en paredes altas</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="../img/alpinismo.jpg" class="d-block rounded img-fluid" alt="Alpinismo">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Alpinismo</h5>
+                            <p>Modalidad de escalada que consiste en escalar paredes con hielo</p>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#segundo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#segundo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </article> 
+                </div>
+                <article>
+                  <h6 class="display-4 m-3">Compañeros de escalada</h6>
+                  <p class="parrafo-normal col-10 m-3">La compañía en un viaje de escalada resulta fundamental. <br>En primer lugar, es indispensable contar con al menos una persona, que será tu compañera de cordada; siempre en una cordada habrá un escalador y un asegurador. <br>Luego, en los viajes de escalada convencionales, es normal que viajes con un grupo de varias personas. <br>Entendemos que no es tan fácil encontrar un grupo afín a vos, más aún para viajar, así que acá te ofrecemos la solución: un formulario para conocerte y ayudarte a encontrar tus compañeros de escalada. ¿Empezamos?</p>
+                  <a href="form.html">
+                    <button class="button-5 p-3 m-3">Ir a completar el formulario</button>
+                  </a>
+                </article>
+        </main>
+        <footer class="row m-3">
+          <div class="col-12"><p class="text-center parrafo-footer">Desarrollado por Jessica Arazi <br> Año 2023 | Informática General | UNA Artes Multimediales </p></div>
+        </footer>
+    </body>
+</html>
+

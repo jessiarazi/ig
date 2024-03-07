@@ -33,3 +33,7 @@ function validarFormulario(){
     document.formulario.submit();
     
 }
+
+function iniciar(){
+    
+}

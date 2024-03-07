@@ -47,6 +47,12 @@ body{
 .seccion-naranja{
     background-color: rgb(255, 127, 1);
 }
+.seccion-naranja-gradient{
+    background: linear-gradient(rgb(255, 127, 1), rgb(20,20,20));
+}
+.seccion-naranja-gradient-back{
+    background: linear-gradient(rgb(20,20,20), rgb(255, 127, 1));
+}
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -80,12 +86,12 @@ video{
     border-radius: 1%;
 }
 .parrafo-normal{
-    color: rgb(216, 216, 216);
+        color: rgb(216, 216, 216);
         font-weight: 300;
         font-style: normal;
         font-size: 1.2em;
 }
-.display-1, .display-4, .display-2, .display-3{
+.display-1, .display-4, .display-2, .display-3, .display-6{
     color: white;
 }
 .imagen-header{
@@ -102,7 +108,7 @@ li{
     color: rgb(216, 216, 216);
 }
 
-#arnes{
+#arnes, .redondeado{
     border-radius: 50px;
 }
 .parrafo-negro, .list-negro{
@@ -172,4 +178,65 @@ li{
     height: 450px;
     width: auto;
     float: right;
+}
+.embed-responsive iframe {
+    width: 90%;
+    height: 90%;
+  }
+  .embed-responsive-16by9 {
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    position: relative;
+    height: 0;
+  }
+  .embed-responsive-16by9 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+  }
+  
+
+.button-5 {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-5:hover, .button-5:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button-5:hover {
+  transform: translateY(-1px);
+}
+
+.button-5:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
 }

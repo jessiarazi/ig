@@ -13,9 +13,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Great+Vibes&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Great+Vibes&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Great+Vibes&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <link rel="icon" href="img/icono.png">
+        <script src="script.js"></script>
     </head>
     <body>
       <header class="sticky-top">
@@ -43,7 +44,7 @@
                   <a class="nav-link" href="muros.html">Muros</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="juego.html">Juego</a>
+                  <a class="nav-link" href="#">Juego</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="datos.html">Datos personales</a>
@@ -53,13 +54,22 @@
           </div>
         </nav>
       </header>
-        <main>
-          <h1 class="display-1">Muros de boulder en la Ciudad de Buenos Aires</h1>
-          <p class="col-10 parrafo-normal">Ya sea porque te apasiona el boulder o porque estás entrenando para tus salidas a la roca, acá te dejamos un mapa donde encontrarás la ubicación exacta de todos los muros de CABA.</p>
-          <iframe src="https://www.google.com/maps/d/embed?mid=1AH-5Scb1vvy7fCks--jRZbUBwh4aFL0&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+        <main class="m-3 p-3">
+          <section class="m-3 p-3">
+
+          <h1 class="display-1">Desafiá tus conocimientos y ganá</h1>
+          <p class="col-10 display-6">¡Completá la trivia y participá por un viaje a la roca!</p>
+          <p class="col-10 parrafo-normal">Nos aliamos con nuestros amigos de Explora y te regalamos un viaje dentro de Argentina para que disfrutes tu escalada, siempre bajo el ciudado de guías.</p>
+        </section>
+        <section class="m-3 p-3">
+          <p class="col-10 display-6">¿Listo para jugar?</p>
+          <button onclick="iniciar()">¡Vamos!</button>
+
+        </section>
+
         </main>
         <footer class="row m-3">
-          <div class="col-12"><p class="text-center parrafo-footer">Desarrollado por Jessica Arazi <br> Año 2023 | Informática General | UNA Artes Multimediales </p></div>
+          <div class="col-12"><p class="text-center parrafo-footer">Desarrollado por<a href="datos.html" class="link"> Jessica Arazi</a> <br> Año 2023 | Informática General | UNA Artes Multimediales </p></div>
         </footer>
     </body>
 </html>
