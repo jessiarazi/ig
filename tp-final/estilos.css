@@ -234,3 +234,6 @@ li{
   box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
   transform: translateY(0);
 }
+.figure-caption{
+    color: rgb(216, 216, 216);
+}
