@@ -63,15 +63,19 @@
           </section>
         
           <section class="m-3 p-3 seccion-juego">
-          <p class="col-md-10 display-6" id="titulo">¿Listx para jugar?</p>
-          <p class="col-md-10 parrafo-normal" id="pregunta">El juego consiste en responder correctamente la mayor cantidad de preguntas posibles sobre escalada en general.<br>  </p>
+            <p class="col-md-10 display-6" id="titulo">¿Listx para jugar?</p>
+            <p class="col-md-10 parrafo-normal" id="pregunta">El juego consiste en responder correctamente la mayor cantidad de preguntas posibles sobre escalada en general.<br>  </p>
+            
+            <button id="rta1" onclick="devolverPosicion('rta1');iniciar();" class="button-5 m-3"></button>
+            <button id="rta2" onclick="devolverPosicion('rta2');iniciar();" class="button-5 m-3"></button>
+            <button id="rta3" onclick="devolverPosicion('rta3');iniciar();" class="button-5 m-3"></button>
+            <button id="rta4" onclick="devolverPosicion('rta4');iniciar();" class="button-5 m-3"></button>
+            
+            <button onclick="iniciar()" class="button-5" id="boton-inicio">¡Vamos!</button>
+            <h3 id="points" class="display-6">Puntaje</h3>
+            <p id="puntaje" class="parrafo-normal"></p>
 
-
-          <button onclick="iniciar()" class="button-5" id="boton-inicio">¡Vamos!</button>
-
-          <h3 id="points" class="display-6">Puntaje</h3>
-          <p id="puntaje" class="parrafo-normal"></p>
-        </section>
+          </section>
         </main>
         <footer class="row m-3">
           <div class="col-12"><p class="text-center parrafo-footer">Desarrollado por<a href="datos.html" class="link"> Jessica Arazi</a> <br> Año 2023 | Informática General | UNA Artes Multimediales </p></div>

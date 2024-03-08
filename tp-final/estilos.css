@@ -238,6 +238,8 @@ li{
     color: rgb(216, 216, 216);
 }
 
+
+/*Estilos para juego*/
 #rta1, #rta2, #rta3, #rta4, #reinicio, #points{
     display: none;
 }
