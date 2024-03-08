@@ -5,12 +5,12 @@ body{
     background-color: #332C2C;
 }
 
-.navbar, .dropdown-menu{
-    background-color: rgba(51, 44, 44, 0.95);
+.navbar{
+    background-color: rgba(255, 127, 1, 0.95);
     box-shadow: 0 5px 4px 0 rgba(0,0,0,.2);
 }
 .navbar-brand, .nav-link{
-    color: rgb(255, 127, 1);
+    color: #332C2C;
 }
 .nav-link:hover{
     color: rgb(216, 216, 216);
@@ -236,4 +236,8 @@ li{
 }
 .figure-caption{
     color: rgb(216, 216, 216);
+}
+
+#rta1, #rta2, #rta3, #rta4, #reinicio, #points{
+    display: none;
 }
