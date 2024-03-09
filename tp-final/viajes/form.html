@@ -19,7 +19,7 @@
       <header class="sticky-top">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html"><img src="../img/icono.png" alt="logo" width="50" height="50" class="d-inline-block align-text-top"></a>
+            <a class="navbar-brand" href="../index.html"><img src="../img/icono.png" alt="logo" class="d-inline-block align-text-top tamano-logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -54,7 +54,7 @@
         <main class="m-3 p-3">
             <section class="parrafo-normal m-3 p-3">
                 <h1 class="display-1">Conectá con tu próxima salida a la roca</h1>
-                <h6 class="col-md-10 display-4">¿Tenés ganas de escalar en la roca pero no tenés con quién? ¿Querés salir con personas que escalen similar a vos?</h3>
+                <h6 class="col-md-10 display-4">¿Tenés ganas de escalar en la roca pero no tenés con quién? ¿Querés salir con personas que escalen similar a vos?</h6>
                 <p class="col-md-10">Completá el siguiente formulario para que podamos contactarte con personas que tengan tus mismos intereses y nivel de escalada. No vamos a compartir tus datos con nadie, solamente los usaremos para brindarte la mejor experiencia.<br> Al enviar el formulario, analizaremos tus datos y nos pondremos en contacto con vos para conectarte con tus compañeros ideales.</p>
                 <div class="contacto-container">
                 <form action="https://api.web3forms.com/submit" method="POST" name="formulario" id="formulario" class="contacto-left">
@@ -86,7 +86,7 @@
                     <label for="objetivos">Comentanos brevemente cuáles son tus objetivos en tu próxima salida a la roca</label><br>
                     <input type="text" name="objetivos" id="objetivos" class="contact-input"><br>
                     <label for="comentarios">Dejanos tus comentarios u observaciones que consideres necesarias</label><br>
-                    <textarea type="text" name="comentarios" id="comentarios" cols="45" rows="5" class="contact-input"></textarea><br>
+                    <textarea name="comentarios" id="comentarios" cols="45" rows="5" class="contact-input"></textarea><br>
                     <input type="button" name="enviar" id="enviar" value="Enviar" onclick="validarFormulario()" class="button-5">
                 </form>
             </div>
