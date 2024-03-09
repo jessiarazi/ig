@@ -36,51 +36,118 @@ function validarFormulario(){
 
 //FUNCIONES JUEGO
     var pregunta; //esta variable tomará cada elemento del array preguntas
-    var preguntas = ['¿Quién fue la primera mujer en encadenar un 9a+?','¿Qué vía de escalada es la más difícil del mundo (9c)?','¿Cuál de los siguientes no es un tipo de agarre común en la escalada?','¿Qué es un "boulder" en el contexto de la escalada?',' ¿Qué significa "Gri-Gri" en el mundo de la escalada?'];
+    var preguntas = [
+        '¿Qué graduación, en escala francesa, tiene la vía Bibliographie?',
+        '¿Quién fue la primera mujer en encadenar un 9a+?',
+        '¿Qué vía de escalada es la más difícil del mundo (9c)?',
+        '¿Cuál de los siguientes no es un tipo de agarre común en la escalada?',
+        '¿Qué es un "boulder" en el contexto de la escalada?',
+        '¿Qué significa "Gri-Gri" en el mundo de la escalada?',
+        '¿Cuántos metros tiene la vía Crown Royale?'
+    ];
     var puntaje = 10; //el juego inicia con un puntaje mayor a 0 así si no contesta bien la primera pregunta, no se reinicia automáticamente
     var indice = 0;
     var contenido;
     var r = 0;
     var opcion;
     var boton;
+    var opcionespreg1;
     
 
     var opciones = [
+        'textbox',
         ['Lynn Hill','Margo Hayes','Anak Verhoeven','Ashima Shiraishi'],
         ['La Dura Dura','Biographie','Silence','Change'],
         ['Regleta','Romo','Pinza','Cráter'],
         ['Un estilo de escalada con cuerda','Un tipo de escalada sin cuerda','Una forma de roca','Una técnica de escalada'],
-        ['Una forma de escalar','Un tipo de roca','Una forma de roca','Un dispositivo de aseguramiento']
+        ['Una forma de escalar','Un tipo de roca','Una forma de roca','Un dispositivo de aseguramiento'],
+        'textbox'
     ];
-    var respuestas = ['Margo Hayes','Silence','Cráter','Un tipo de escalada sin cuerda','Un dispositivo de aseguramiento'];
+    var respuestas = [
+        '9a+',
+        'Margo Hayes',
+        'Silence',
+        'Cráter',
+        'Un tipo de escalada sin cuerda',
+        'Un dispositivo de aseguramiento',
+        '100'
+    ];
     var botones = ['rta1','rta2','rta3','rta4'];
 
     function iniciar(){
+        console.log("corre iniciar");
         document.getElementById('boton-inicio').style.display = 'none'; //reemplaza el contenido del botón comenzar por "siguiente pregunta"
+
+        document.getElementById('rta1').style.display = 'block';
+        document.getElementById('rta2').style.display = 'block';
+        document.getElementById('rta3').style.display = 'block';
+        document.getElementById('rta4').style.display = 'block';
+
         sortearpregunta(); //genera una nueva pregunta a partir de la función sortearpregunta()
         
         document.getElementById('titulo').innerHTML = pregunta; //reemplaza el contenido del título por una pregunta
         document.getElementById('points').style.display = 'block'; //muestra los puntos
         document.getElementById('pregunta').style.display = 'none'; //oculta parrafo explicativo
-        document.getElementById('rta1').style.display = 'block';
-        document.getElementById('rta2').style.display = 'block';
-        document.getElementById('rta3').style.display = 'block';
-        document.getElementById('rta4').style.display = 'block';
         document.getElementById('points').style.display = 'block';
         document.getElementById('puntaje').innerHTML = 'Tu puntaje actual: '+ puntaje +' puntos'; //muestra el puntaje en el id "puntaje"
 
     }
-
+    function ocultar (){
+            document.getElementById('rta1').style.display = 'none';
+            document.getElementById('rta2').style.display = 'none';
+            document.getElementById('rta3').style.display = 'none';
+            document.getElementById('rta4').style.display = 'none';
+}
     function sortearpregunta(){
         pregunta = preguntas[indice]; //va tomando las preguntas del array "preguntas"
-        opcionespreg1 = opciones[indice]; //agarra un array
+        opcionespregn = opciones[indice]; //agarra un array
 
-        if(indice==0){
+        if (opcionespregn == "textbox") {
+            console.log("textbox");
+            document.getElementById('rta1').style.display = 'none';
+            document.getElementById('rta2').style.display = 'none';
+            document.getElementById('rta3').style.display = 'none';
+            document.getElementById('rta4').style.display = 'none';
+        } else {
             //el siguiente for recorre el array opciones y mete cada índice en un botón diferente
-            for (i=0; i<opcionespreg1.length; i++){
-                opcion = opcionespreg1[i]; //toma las opciones de respuesta
+            for (i=0; i<opcionespregn.length; i++){
+                opcion = opcionespregn[i]; //toma las opciones de respuesta
                 boton = botones[i]; //toma elementos del array botones, que son los id de los botones
                 document.getElementById(boton).innerHTML = opcion; //el opcion debe meterse en el botón 1, que es el que tiene id "rta1", que es la posición 0 del array "botones"
             }
         }
     }
+
+    function comparar(identidad){ //compara si el resultado es el adecuado
+        contenido = document.getElementById(identidad).innerHTML; //agarra el contenido de cada botón que tiene un id diferente (el "identidad" se pone en el HTML)
+
+        if (contenido == respuestas[r]){
+            alert("¡Respuesta correcta! Sumás 10 puntos")
+            puntaje += 10;
+            indice++;
+        }
+        if (contenido !==respuestas[r]){ //si lo respondido es diferente a la respuesta correcta
+            alert('Respuesta incorrecta');
+            puntaje -=5; //resta 5 puntos al puntaje
+            indice++; //aumenta el índice para que funcione bien la funcion sortearpregunta().
+        }
+
+        r++; //recorre el array de respuestas sumandole 1 a r cada vez que termina la función
+        
+        document.getElementById('puntaje').innerHTML = 'Tu puntaje actual: '+ puntaje +' puntos'; //muestra el puntaje en el id "puntaje"
+    
+
+        if(puntaje<=0){
+            alert('¡Perdiste! Te quedaste sin puntos. El juego se reiniciará.');
+            reiniciar(); //si el juego no sigue, no aumenta el índice, y reinicia (en la función reiniciar)
+        }
+    }
+
+    function compararInputs(idInput){
+        valor = document.getElementById(idInput).value; //toma el valor que indicó el usuario en el input, es variable el id de cada input porque hay varios
+    }
+
+    function reiniciar(){ //cuando esta función es llamada, la página se recarga así el juego se reinicia.
+        location.reload();
+    }
+    
