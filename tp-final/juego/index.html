@@ -59,25 +59,27 @@
 
             <h1 class="display-1">Desafiá tus conocimientos y ganá</h1>
             <p class="col-10 display-6">¡Completá la trivia y participá por un viaje a la roca!</p>
-            <p class="col-10 parrafo-normal">Nos aliamos con nuestros amigxs de Explora y te regalamos un viaje dentro de Argentina para que disfrutes tu escalada, siempre bajo el ciudado de guías.</p>
+            <p class="col-10 parrafo-normal">Nos aliamos con nuestros amigxs de Explora y tenés la chance de ganarte un viaje dentro de Argentina para que disfrutes tu escalada, siempre bajo el ciudado de guías profesionales. ¡Jugá la trivia y si obtenés más de 100 puntos, participás de un sorteo en el cual podés ganarte un viaje!</p>
           </section>
         
           <section class="m-3 p-3 seccion-juego">
             <p class="col-md-10 display-6" id="titulo">¿Listx para jugar?</p>
-            <p class="col-md-10 parrafo-normal" id="pregunta">El juego consiste en responder correctamente la mayor cantidad de preguntas posibles sobre escalada en general.<br>  </p>
+            <p class="col-md-10 parrafo-normal" id="pregunta">El juego consiste en responder correctamente la mayor cantidad de preguntas posibles sobre escalada en general.<br> Habrá preguntas de tipo opción múltiple, y otras para que completes sin opciones. <br> Las respuestas correctas de opción múltiple sumarán 10 puntos, mientras que las incorrectas restarán 5 puntos.<br> En las preguntas para completar, si la respuesta es correcta sumarás 20 puntos, si es incorrecta, restarás 10 puntos.</p>
             
             <button id="rta1" onclick="comparar('rta1');sortearpregunta();" class="button-5 m-3"></button>
             <button id="rta2" onclick="comparar('rta2');sortearpregunta();" class="button-5 m-3"></button>
             <button id="rta3" onclick="comparar('rta3');sortearpregunta();" class="button-5 m-3"></button>
             <button id="rta4" onclick="comparar('rta4');sortearpregunta();" class="button-5 m-3"></button>
             
-           <button onclick="ocultar()">ocultar</button>
+
+            <input type="text" id="input-user" class="contact-input"> <br>
+            <button class="button-5 m-3" onclick="compararInputs();sortearpregunta();" id="siguiente">Siguiente pregunta</button>
+
             <button onclick="iniciar()" class="button-5" id="boton-inicio">¡Vamos!</button>
             <h3 id="points" class="display-6">Puntaje</h3>
             <p id="puntaje" class="parrafo-normal"></p>
 
-            <input type="text" id="input-user-1"> <br>
-            <button class="button-5 m-3" onclick="compararInputs('input-user-1')">Siguiente pregunta</button>
+            
           </section>
         </main>
         <footer class="row m-3">

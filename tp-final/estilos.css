@@ -249,9 +249,11 @@ li{
 
 
 /*Estilos para juego*/
-#rta1, #rta2, #rta3, #rta4, #reinicio, #points{
+#rta1, #rta2, #rta3, #rta4, #reinicio, #points, #input-user, #siguiente{
     display: none;
 }
+
+
 
 
 .card {
