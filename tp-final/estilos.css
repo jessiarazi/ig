@@ -305,9 +305,9 @@ li{
     background-color: #fb8332;
     color: #332C2C;
     transform: rotateY(180deg);
-    display: flex; /* Añadir esta línea */
-  flex-direction: column; /* Añadir esta línea para apilar el contenido verticalmente */
-  align-items: center; /* Añadir esta línea para centrar verticalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
 /*Estilos de las FAQ escaladoras*/
