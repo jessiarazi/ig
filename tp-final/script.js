@@ -139,7 +139,7 @@ function validarFormulario(){
 
 
         if (contenido == respuestas[numeroPregunta]){
-            alert("¡Respuesta correcta! Sumás 10 puntos")
+            alert('¡Respuesta correcta! Sumás 10 puntos');
             puntaje += 10;
             numeroPregunta++;
         }
@@ -169,11 +169,11 @@ function validarFormulario(){
 
 
         if(valor == respuestas[numeroPregunta]){
-            alert("¡Respuesta correcta! Sumás 20 puntos");
+            alert('¡Respuesta correcta! Sumás 20 puntos');
             puntaje += 20;
             numeroPregunta++;
         } else if (valor == '') {
-            alert('¡Respuesta vacía! Colocá una respuesta')
+            alert('¡Respuesta vacía! Colocá una respuesta');
         }
         else { //si lo respondido es diferente a la respuesta correcta
             alert('Respuesta incorrecta, restás 10 puntos');
