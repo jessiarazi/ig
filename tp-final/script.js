@@ -79,7 +79,8 @@ function validarFormulario(){
     function iniciar(){
         console.log("corre iniciar");
         document.getElementById('boton-inicio').style.display = 'none'; //reemplaza el contenido del botón comenzar por "siguiente pregunta"
-
+        document.getElementById('subt').style.display = 'none';
+        document.getElementById('sub-subt').style.display = 'none';
         document.getElementById('rta1').style.display = 'block';
         document.getElementById('rta2').style.display = 'block';
         document.getElementById('rta3').style.display = 'block';

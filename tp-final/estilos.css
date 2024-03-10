@@ -138,9 +138,11 @@ li{
     padding-left: 25px;
     margin: 15px;
     font-weight: 500;
-    color: #666;
+    color: black;
     border-radius: 50px;
+    background-color: #c4baba;
 }
+
 .contact-input:focus{
     border: 2px solid rgb(255, 127, 1);
 }
