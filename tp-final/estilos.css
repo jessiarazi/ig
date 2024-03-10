@@ -27,19 +27,6 @@ body{
 .seccion-negro{
     background-color: #332C2C;
 }
-.abajo{
-    z-index: 0;
-}
-.superpuesto{
-    position: absolute;
-  top: 25%;
-  left: 5%;
-  width: 90%;
-  color: #332C2C;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: left;
-}
 .blockquote, .blockquote-footer{
     color: rgb(255, 127, 1);
     text-align: center;
@@ -54,37 +41,24 @@ body{
 .seccion-naranja{
     background-color: rgb(255, 127, 1);
 }
-.seccion-naranja-gradient{
-    background: linear-gradient(rgb(255, 127, 1), #332C2C);
-}
-.seccion-naranja-gradient-back{
-    background: linear-gradient(#332C2C, rgb(219, 142, 65));
-}
 .card {
-    /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 300px;
     height: 400px;
   }
-  
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
+.card:hover {
     box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.5);
   }
-  a{
+a{
     text-decoration: none;
     color: #332C2C;
     display: inline;
   }
-  a:hover{
+a:hover{
     color:rgb(255, 127, 1);
     
   }
- /* .imagen-card{
-    width: 292px;
-    height: 200px;
-    object-fit: cover;  } */
 .parrafo-footer{
     color: white;
     font-size: smaller;
@@ -114,7 +88,6 @@ video{
 li{
     color: rgb(216, 216, 216);
 }
-
 #arnes, .redondeado{
     border-radius: 50px;
 }
@@ -142,7 +115,6 @@ li{
     border-radius: 50px;
     background-color: #c4baba;
 }
-
 .contact-input:focus{
     border: 2px solid rgb(255, 127, 1);
 }
@@ -158,7 +130,6 @@ li{
 #tabla{
     border-radius: 20px;
 }
-
 .foto-acompaña{
     width: 880px;
     height: auto;
@@ -174,11 +145,6 @@ li{
     max-width: 900px;
     height: auto;
     margin: auto;
-}
-#yo{
-    height: 450px;
-    width: auto;
-    float: right;
 }
 .embed-responsive iframe {
     width: 90%;
@@ -196,8 +162,6 @@ li{
     width: 90%;
     height: 90%;
   }
-  
-
 .button-5 {
   align-items: center;
   background-clip: padding-box;
@@ -226,16 +190,13 @@ li{
   vertical-align: baseline;
   width: auto;
 }
-
 .button-5:hover, .button-5:focus {
   background-color: #fb8332;
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
-
 .button-5:hover {
   transform: translateY(-1px);
 }
-
 .button-5:active {
   background-color: #c85000;
   box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
@@ -249,15 +210,11 @@ li{
   font-size: small;
 }
 
-
 /*Estilos para juego*/
 #rta1, #rta2, #rta3, #rta4, #reinicio, #points, #input-user, #siguiente{
     display: none;
 }
-
-
-
-
+/*--*/
 .card {
     position: relative;
     width: 220px;
@@ -271,7 +228,6 @@ li{
     border-radius: 15px;
     cursor: pointer;
   }
-  
   .card::before,
   .card::after {
     position: absolute;
@@ -286,19 +242,16 @@ li{
     background-color: rgb(255, 255, 255);
     transition: all 0.5s;
   }
-  
   .card::before {
     top: 0;
     right: 0;
     border-radius: 0 15px 0 100%;
   }
-  
   .card::after {
     bottom: 0;
     left: 0;
     border-radius: 0 100%  0 15px;
   }
-  
   .card:hover::before,
   .card:hover:after {
     width: 100%;
@@ -306,7 +259,6 @@ li{
     border-radius: 15px;
     transition: all 0.5s;
   }
-  
   .card:hover:after {
     content: "Descubrí más";
   }
