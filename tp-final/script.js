@@ -205,3 +205,16 @@ function validarFormulario(){
         location.reload();
     }
     
+//FUNCIONES DATOS PERSONALES
+function mostrardatos() {
+    var datosCursada = document.getElementById('datos-cursada');
+    var botonCursada = document.getElementById('boton-cursada');
+
+    if (datosCursada.style.display == 'block') {
+        datosCursada.style.display = 'none';
+        botonCursada.innerHTML = 'Ver datos cursada';
+    } else {
+        datosCursada.style.display = 'block';
+        botonCursada.innerHTML = 'Ocultar datos cursada';
+    }
+}

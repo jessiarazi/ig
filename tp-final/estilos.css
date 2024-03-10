@@ -371,3 +371,7 @@ li{
 .seccion-blanca{
   background-color: white;
 }
+
+#datos-cursada{
+  display: none;
+}
